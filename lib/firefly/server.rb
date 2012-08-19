@@ -289,7 +289,8 @@ module Firefly
         check_mysql_collation
         check_code_factory
       rescue
-        puts "Error setting up database connection. Please check the `database` setting in config.ru"
+        error_msg = "Error setting up database connection. Please check the `database` setting in config.ru"
+        puts error_msg
         puts $!
         puts "-------"
         puts $!.backtrace
